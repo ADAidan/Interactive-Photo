@@ -1,0 +1,107 @@
+@keyframes button-circle {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.8);
+  }
+
+  75% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+@keyframes button-border {
+  0% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.banner-button {
+  position: absolute;
+  background-color: rgba(100, 108, 255, 0);
+  border-radius: 50%;
+  border: none;
+}
+
+.banner-button:hover {
+  background-color: rgba(100, 108, 255, 0);
+  border: none;
+}
+
+.button-border {
+  padding: .6rem;
+  background-color: rgba(100, 108, 255, 0);
+  border-style: solid;
+  border-width: .2rem;
+  border-color: rgba(128, 135, 255, 0.5);
+  border-radius: 50%;
+  animation: button-border 2.5s infinite;
+}
+
+.button-circle {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(100, 108, 255, 0.8);
+  border-radius: 50%;
+  border: none;
+  animation: button-circle 2.5s infinite;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: rgba(200, 200, 200, 0.8);
+  color: #000;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  padding: .5rem 1rem;
+  position: absolute;
+  z-index: 1;
+  top: .67rem;
+  left: 3.7rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+
+.banner-button:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes tooltip-pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.banner-button:active .tooltip {
+  animation: tooltip-pulse 0.1s;
+}

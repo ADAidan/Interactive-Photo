@@ -1,3 +1,4 @@
+import * as React from "react";
 import banner from "../public/images/banner.jpg";
 import Button from "./Button";
 import "./InteractiveBanner.css";
@@ -14,9 +15,20 @@ const products = [
 ];
 
 const InteractiveBanner = () => {
+  const [imageLoaded, setImageLoaded] = React.useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
     <div className="banner-container">
-      <img src={banner} alt="banner" className="banner-image" />
+      <img
+        src={banner}
+        alt="banner"
+        onLoad={handleImageLoad}
+        className={`banner-image ${imageLoaded ? "loaded" : ""}`}
+      />
       {products.map((product, index) => (
         <Button key={index} product={product} />
       ))}
