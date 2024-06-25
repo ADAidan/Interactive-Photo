@@ -2,7 +2,15 @@
 
 This is a demo website that displays an interactive photo where users can click on the items in the photo. This website is built using React + Vite with Javascript.
 
+## Demo
+
+[Interactive Photo](https://adaidan.github.io/Interactive-Photo/)
+
 ## intallation
+
+```bash
+git clone https://github.com/ADAidan/Interactive-Photo.git
+```
 
 ```bash
 npm install
